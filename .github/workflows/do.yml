@@ -17,7 +17,8 @@ jobs:
           cd rsa
           ls
       - name: generate
-        run: python generate_primenumber.py
+        run: |
+          (python generate_primenumber.py) < num.txt
       - name: push
         run: |
           git add .

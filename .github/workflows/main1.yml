@@ -7,6 +7,8 @@ jobs:
     name: Use Linux commands
     runs-on: ubuntu-20.04
     steps:
+      - name: show
+        run: pwd
       - name: generate
         run: python generate_primenumbers.py
       - name: push

@@ -12,6 +12,8 @@ jobs:
           cd ..
           pwd
           ls -a
+          rm -rf rsa
+          git clone https://github.com/rotarymars/rsa.git
       - name: generate
         run: python generate_primenumbers.py
       - name: push

@@ -1,14 +1,17 @@
 name: command
-on:
+on: 
   schedule:
-    - cron: "10 * * * *"
-        
+    - cron: "15 * * * *"
 jobs:
-  command: 
-    name: make_prime
-    runs_on: ubuntu-latest
+  command:
+    name: Use Linux commands
+    runs-on: ubuntu-20.04
     steps:
-      name: do
-      run: |
-      python generate_primenumber.py
-      10000
+      - name: generate
+        run: python generate_primenumbers.py
+      - name: push
+        run: |
+          git add .
+          git commit -m "auto commit"
+          git push origin main
+          

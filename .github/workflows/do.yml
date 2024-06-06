@@ -6,7 +6,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: show
-        run: pwd
+        run: |
+          pwd
+          ls -a
+          cd ..
+          pwd
+          ls -a
       - name: generate
         run: python generate_primenumbers.py
       - name: push

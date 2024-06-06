@@ -1,0 +1,14 @@
+name: command
+on:
+  schedule:
+    - cron: "10 * * * *"
+        
+jobs:
+  command: 
+    name: make_prime
+    runs_on: ubuntu-latest
+    steps:
+      name: do
+      run: |
+      python generate_primenumber
+      10000

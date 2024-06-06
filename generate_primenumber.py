@@ -1,6 +1,5 @@
 import math
-a=int(input("bigger than:"))
-b=int(input("less than:"))
+a=int(input("How many?:"))
 m=set()
 f = open("./GeneratedPrime.txt","rb")
 for i in f:
@@ -23,11 +22,13 @@ def isprime(a: int) -> bool:
             return False
     m.add(a)
     return True
-for i in range(a,b+1):
+m_list=sorted(m)
+biggestprime=m_list[len(m_list)-1]
+for i in range(biggestprime,biggestprime+a):
     isprime(i)
-m=sorted(m)
+m_list=sorted(m)
 f = open("./GeneratedPrime.txt",'w')
-for i in m:
+for i in m_list:
     f.write(str(i)+'\n')
 #f.writelines(m)
 f.close()

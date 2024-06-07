@@ -2,7 +2,7 @@ import math
 import os
 import sys
 args = sys.argv
-a=args[1]
+a=int(args[1])
 m=set()
 f = open("./GeneratedPrime.txt","rb")
 for i in f:

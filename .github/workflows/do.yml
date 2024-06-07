@@ -21,6 +21,8 @@ jobs:
           python generate_primenumber.py 10000
       - name: push
         run: |
+          git config --global user.name "name"
+          git config --global user.email "email"
           git add .
           git commit -m "auto commit"
           git push origin main

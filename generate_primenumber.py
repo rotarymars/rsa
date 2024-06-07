@@ -1,5 +1,7 @@
 import math
-a=int(input("How many?:"))
+import os
+args = sys.argv
+a=args[1]
 m=set()
 f = open("./GeneratedPrime.txt","rb")
 for i in f:

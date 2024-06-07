@@ -8,7 +8,7 @@ f = open("./GeneratedPrime.txt","rb")
 for i in f:
     m.add(int(i.rstrip()))
 f.close()
-print(m)
+#print(m)
 def isprime(a: int) -> bool: 
     global m
     biggestprimeinm=2
@@ -35,4 +35,4 @@ for i in m_list:
     f.write(str(i)+'\n')
 #f.writelines(m)
 f.close()
-print(m)
+#print(m)

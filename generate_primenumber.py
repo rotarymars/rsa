@@ -1,14 +1,18 @@
 import math
 import os
 import sys
+import time
 args = sys.argv
 a=int(args[1])
 m=set()
+start=time.time()
 f = open("./GeneratedPrime.txt","rb")
 for i in f:
     m.add(int(i.rstrip()))
 f.close()
 #print(m)
+end=time.time()
+print(f"Used {end-start} secs to read generated prime numbers")
 def isprime(a: int) -> bool: 
     global m
     biggestprimeinm=2
@@ -25,10 +29,15 @@ def isprime(a: int) -> bool:
             return False
     m.add(a)
     return True
+start=time.time()
 m_list=sorted(m)
 biggestprime=m_list[len(m_list)-1]
 for i in range(biggestprime,biggestprime+a):
-    isprime(i)
+    if isprime(i):
+        print(i)
+end=time.time()
+print(f"{(end-start)/a} sec per number.")
+start=time.time()
 m_list=sorted(m)
 f = open("./GeneratedPrime.txt",'w')
 for i in m_list:
@@ -36,3 +45,5 @@ for i in m_list:
 #f.writelines(m)
 f.close()
 #print(m)
+end=time.time()
+print(f"Used {end-start} secs to write prime numbers")

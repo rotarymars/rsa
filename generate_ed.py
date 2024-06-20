@@ -1,9 +1,10 @@
+import os
+from GetBiggestTwo import returnbiggesttwo
 def gcd(a, b):
     while b != 0:
         a, b = b, a%b
     return a
-p=int(input())
-q=int(input())
+p,q=returnbiggesttwo()
 n=p*q
 print('n',n)
 e=2
@@ -21,3 +22,9 @@ while True:
         break
     temp+=1
 print('d',d)
+with open("./n.txt",mode='w') as f:
+    f.write(f"{str(n)}\n")
+with open("./e.txt",mode='w') as f:
+    f.write(f"{str(e)}\n")
+with open("./d.txt",mode='w') as f:
+    f.write(f"{str(d)}\n")

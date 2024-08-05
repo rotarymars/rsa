@@ -1,4 +1,5 @@
 import math
+import GetBiggestTwo
 import os
 import sys
 import time
@@ -47,3 +48,8 @@ f.close()
 #print(m)
 end=time.time()
 print(f"Used {end-start} secs to write prime numbers")
+first, second=GetBiggestTwo.returnbiggesttwo()
+f=open("./n.txt",'w')
+f.write(str(first*second))
+f.close()
+

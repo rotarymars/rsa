@@ -5,7 +5,7 @@
 #include <set>
 using namespace std;
 int main(){
-  constexpr int N = 1000;
+  constexpr int N = 10000;
   set<boost::multiprecision::cpp_int>se;
   {
     fstream generatedprime("./GeneratedPrime.txt");
@@ -14,12 +14,12 @@ int main(){
       se.insert(temp);
     }
   }
-  cerr<<"se.size(): "<<se.size()<<endl;
-  cerr<<"---"<<endl;
-  for(auto&i:se) {
-    cerr<<i<<endl;
-  }
-  cerr<<"---"<<endl;
+  /*cerr<<"se.size(): "<<se.size()<<endl;*/
+  /*cerr<<"---"<<endl;*/
+  /*for(auto&i:se) {*/
+  /*  cerr<<i<<endl;*/
+  /*}*/
+  /*cerr<<"---"<<endl;*/
   auto isprime = [&](boost::multiprecision::cpp_int x) {
     for(auto&i:se){
       if(x%i==0){
@@ -32,10 +32,10 @@ int main(){
     return true;
   };
   boost::multiprecision::cpp_int maxint = *prev(se.end(),1);
-  cerr<<"maxint: "<<maxint<<endl;
+  /*cerr<<"maxint: "<<maxint<<endl;*/
   for(boost::multiprecision::cpp_int i=maxint; i<=maxint+N;i++){
     if(isprime(i)){
-      cout<<i<<'\n';
+      /*cout<<i<<'\n';*/
       se.insert(i);
     }
   }

@@ -1,0 +1,2 @@
+-I ../atcoder-competitive_programming/template
+-std=gnu++2b

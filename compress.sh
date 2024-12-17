@@ -1,2 +1,2 @@
-zip primes.zip GeneratedPrime.txt
-rm ./GeneratedPrime.txt
+zip primes.zip GeneratedPrime_*.txt
+rm ./GeneratedPrime_*.txt

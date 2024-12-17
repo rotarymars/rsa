@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <fstream>
 #include <boost/multiprecision/cpp_int.hpp>
 #include <set>
